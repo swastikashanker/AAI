@@ -38,6 +38,9 @@ class GatesActivity:AppCompatActivity() {
         val enteringref=FirebaseDatabase.getInstance().getReference("Entering")
         val leavingref=FirebaseDatabase.getInstance().getReference("Leaving")
 
+
+
+
         enteringref.addValueEventListener(object :ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
                 TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -52,14 +55,48 @@ class GatesActivity:AppCompatActivity() {
                 val cartesian = AnyChart.column()
                 data.add(ValueDataEntry("Entering",entering))
 
+
                 val column = cartesian.column(data)
                 column.data(data)
 
                 anyChartView.setChart(cartesian)
             }
+        })
+
+
+
+
+
+        leavingref.addValueEventListener(object :ValueEventListener{
+            override fun onCancelled(p1: DatabaseError) {
+
+            }
+
+            override fun onDataChange(p1: DataSnapshot) {
+
+                val leaving =p1.getValue(Long::class.java)
+                val data = ArrayList<DataEntry>()
+                val anyChartView = findViewById<AnyChartView>(R.id.chart_gates)
+                val cartesian = AnyChart.column()
+                data.add(ValueDataEntry("leaving",leaving))
+
+
+                val column = cartesian.column(data)
+                column.data(data)
+
+                anyChartView.setChart(cartesian)
+
+
+                Log.e("Leaving","$leaving")
+                makeText(applicationContext,"No. of people leaving are $leaving", LENGTH_SHORT).show()
+
+
+            }
 
 
         })
+
+
 
 
 

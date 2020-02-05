@@ -66,4 +66,42 @@ class ParkingActivity:AppCompatActivity() {
 
 
     }
+
+
+    private var thread: Thread? = null
+
+    private fun feedMultiple() {
+
+        if (thread != null)
+            thread!!.interrupt()
+
+        val runnable = Runnable {
+            //call the update function
+        }
+
+        thread = Thread(Runnable {
+            for (i in 0..999) {
+
+                // Don't generate garbage runnables inside the loop.
+                runOnUiThread(runnable)
+
+                try {
+                    Thread.sleep(25)
+                } catch (e: InterruptedException) {
+                    e.printStackTrace()
+                }
+
+            }
+        })
+
+        thread!!.start()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        if (thread != null) {
+            thread!!.interrupt()
+        }
+    }
 }
