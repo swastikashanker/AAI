@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "976910470992",
+    "firebase_url": "https://airports-authority.firebaseio.com",
+    "project_id": "airports-authority",
+    "storage_bucket": "airports-authority.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976910470992:android:1b3561d651c953f2786655",
+        "android_client_info": {
+          "package_name": "com.example.aai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976910470992-ljeo8ou2jsmlc4jg5fqh8u751klepve3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aai",
+            "certificate_hash": "a33f1f04afb973d629f32b50c30016227d3b0a3b"
+          }
+        },
+        {
+          "client_id": "976910470992-52i2b5pd7jtq5t9a5dpogbqg2llssjqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsj9pazAibYJzd5QmIA-3yhF9qMG5LMTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976910470992-52i2b5pd7jtq5t9a5dpogbqg2llssjqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvProximity"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="250dp"
+            card_view:cardCornerRadius="30dp">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_cv1"  >
+
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/ivSub1"
+
+                    android:scaleType="centerCrop"
+
+                    />
+                <TextView
+                    android:id="@+id/tvSub1"
+                    android:layout_below="@+id/ivSub1"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:text="Proximity Sensor"
+                    android:textStyle="bold"
+                    android:textColor="#f83600"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:id="@+id/tvSubdescription1"
+                    android:layout_below="@+id/tvSub1"
+                    android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="#403b4a"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    />
+
+
+                <ImageButton
+                    android:layout_below="@+id/tvSubdescription1"
+                    android:layout_alignRight="@+id/tvSubdescription1"
+                    android:id="@+id/btnProximity"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_froward"
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvParking"
+            android:layout_gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="250dp"
+            card_view:cardCornerRadius="30dp">
+
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_cv4">
+
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/ivSub2"
+
+                    android:scaleType="centerCrop"
+
+                    />
+                <TextView
+                    android:id="@+id/tvSub2"
+                    android:layout_below="@+id/ivSub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Parking Monitoring System"
+                    android:textStyle="bold"
+                    android:textColor="#f83600"/>
+
+                <TextView
+                    android:id="@+id/tvSubdescription2"
+                    android:layout_below="@+id/tvSub2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textColor="#403b4a"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:text=""
+                    />
+
+
+                <ImageButton
+                    android:layout_below="@+id/tvSubdescription2"
+                    android:layout_alignRight="@+id/tvSubdescription2"
+                    android:id="@+id/btnParking"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                   android:src="@drawable/ic_froward"
+
+
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvCctv"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="250dp"
+            card_view:cardCornerRadius="30dp">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_cv2">
+
+
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/ivSub3"
+
+                    android:scaleType="centerCrop"
+                    />
+                <TextView
+                    android:id="@+id/tvSub3"
+                    android:layout_below="@+id/ivSub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="CCTV Footage"
+                    android:textStyle="bold"
+                    android:textColor="#f83600"/>
+
+                <TextView
+                    android:id="@+id/tvSubdescription3"
+                    android:layout_below="@+id/tvSub3"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#403b4a"
+                    android:text=""
+                    />
+
+
+                <ImageButton
+                    android:layout_below="@+id/tvSubdescription3"
+                    android:layout_alignRight="@+id/tvSubdescription3"
+                    android:id="@+id/btnCctv"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_froward"
+
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cvGates"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="250dp"
+            card_view:cardCornerRadius="30dp">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_cv5">
+
+
+                <ImageView android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:id="@+id/ivSub4"
+
+                    android:scaleType="centerCrop"
+                    />
+                <TextView
+                    android:id="@+id/tvSub4"
+                    android:layout_below="@+id/ivSub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Gate Monitoring System"
+                    android:textStyle="bold"
+                    android:textColor="#f83600"/>
+
+                <TextView
+                    android:id="@+id/tvSubdescription4"
+                    android:layout_below="@+id/tvSub4"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold"
+                    android:textColor="#403b4a"
+                    android:text=""
+                    />
+
+                <ImageButton
+                    android:layout_below="@+id/tvSubdescription4"
+                    android:layout_alignRight="@+id/tvSubdescription4"
+                    android:id="@+id/btnGate"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_froward"
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
