@@ -62,29 +62,6 @@ class GatesActivity:AppCompatActivity() {
         })
 
 
-        enteringref.addValueEventListener(object :ValueEventListener{
-            override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-            }
-
-            override fun onDataChange(p0: DataSnapshot) {
-                val entering= p0.getValue(Long::class.java)
-                val data = ArrayList<DataEntry>()
-                Log.e("Entering","$entering")
-                makeText(applicationContext,"No. of people entering are $entering", LENGTH_SHORT).show()
-                val anyChartView = findViewById<AnyChartView>(R.id.chart_gates)
-                val cartesian = AnyChart.column()
-                data.add(ValueDataEntry("Entering",entering))
-
-                val column = cartesian.column(data)
-                column.data(data)
-
-                anyChartView.setChart(cartesian)
-            }
-
-
-        })
-
 
 
 
