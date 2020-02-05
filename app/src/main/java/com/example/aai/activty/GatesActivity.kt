@@ -17,6 +17,7 @@ class GatesActivity:AppCompatActivity() {
 
         val pie = AnyChart.pie()
 
+
         val data = ArrayList<DataEntry>()
         data.add(ValueDataEntry("John", 10000))
         data.add(ValueDataEntry("Jake", 12000))
