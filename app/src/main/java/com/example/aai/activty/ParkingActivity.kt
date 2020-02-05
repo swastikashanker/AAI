@@ -44,8 +44,12 @@ class ParkingActivity:AppCompatActivity() {
                 val occupied = p0.getValue(Long::class.java)
 
                 Log.e("Occupied", "Occupied $occupied")
+                val unoccupied = 10.00 - occupied as Long
+                Log.e("unoccc","$unoccupied")
+
                 data.add(ValueDataEntry("Occupied space",occupied))
-                data.add(ValueDataEntry("Free space",))
+                data.add(ValueDataEntry("Unoccupied space",unoccupied))
+               // data.add(ValueDataEntry("Free space",))
                 pie.data(data)
 
                 val anyChartView = findViewById<AnyChartView>(R.id.chart_parking)
@@ -60,16 +64,6 @@ class ParkingActivity:AppCompatActivity() {
 
 
 
-
-//        val data = ArrayList<DataEntry>()
-//
-//        data.add(ValueDataEntry("Free Space", 12000))
-//
-//
-//        pie.data(data)
-//
-//        val anyChartView = findViewById<AnyChartView>(R.id.any_chart_view)
-//        anyChartView.setChart(pie)
 
     }
 }

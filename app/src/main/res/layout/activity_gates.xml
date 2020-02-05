@@ -10,7 +10,7 @@
         />
 
     <com.anychart.AnyChartView
-        android:id="@+id/any_chart_view"
+        android:id="@+id/chart_gates"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
