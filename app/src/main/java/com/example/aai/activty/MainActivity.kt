@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnParking.setOnClickListener {
+        cvParking.setOnClickListener {
 
             val parking = Intent(baseContext,ParkingActivity::class.java)
             startActivity(parking)
@@ -26,19 +26,19 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        btnProximity.setOnClickListener{
+        cvProximity.setOnClickListener{
             val proximity = Intent(baseContext,ProximityActivity::class.java)
             startActivity(proximity)
 
         }
 
-        btnCctv.setOnClickListener{
+        cvCctv.setOnClickListener{
             val cctv=Intent(baseContext,CctvActivity::class.java)
             startActivity(cctv)
         }
 
 
-        btnGate.setOnClickListener {
+        cvGates.setOnClickListener {
             val gate = Intent(baseContext,GatesActivity::class.java)
             startActivity(gate)
         }

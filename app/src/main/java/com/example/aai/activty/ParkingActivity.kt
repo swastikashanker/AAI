@@ -22,6 +22,13 @@ class ParkingActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parking)
 
+        setTitle("Parking Monitoring")
+
+        update_data()
+
+    }
+    private fun update_data()
+    {
         val pie = AnyChart.pie()
 
 
@@ -29,9 +36,6 @@ class ParkingActivity:AppCompatActivity() {
 
 
         Log.e("TAG", "IS $occupiedref")
-
-
-
 
         occupiedref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -49,22 +53,24 @@ class ParkingActivity:AppCompatActivity() {
 
                 data.add(ValueDataEntry("Occupied space",occupied))
                 data.add(ValueDataEntry("Unoccupied space",unoccupied))
-               // data.add(ValueDataEntry("Free space",))
+
+
+                // data.add(ValueDataEntry("Free space",))
                 pie.data(data)
 
+
                 val anyChartView = findViewById<AnyChartView>(R.id.chart_parking)
+
                 anyChartView.setChart(pie)
+
                 Toast.makeText(applicationContext,"Occupied space is $occupied", Toast.LENGTH_SHORT).show()
+//               pie.data(data)
+
+
+//                anyChartView.clear()
             }
 
         })
-
-
-
-
-
-
-
     }
 
 
@@ -77,6 +83,7 @@ class ParkingActivity:AppCompatActivity() {
 
         val runnable = Runnable {
             //call the update function
+            update_data()
         }
 
         thread = Thread(Runnable {
