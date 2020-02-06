@@ -48,8 +48,9 @@
                 <ImageView
                     android:id="@+id/btnProximity"
                     android:layout_height="90dp"
-                    android:src="@drawable/proximity"
+                    android:src="@drawable/ic_airport"
                     style="@style/homeCardImage"
+                    android:tint="#ffffff"
                     />
 
             </RelativeLayout>
@@ -92,8 +93,9 @@
                 <ImageView
                     android:id="@+id/btnParking"
                     android:layout_height="90dp"
-                    android:src="@drawable/parking"
+                    android:src="@drawable/ic_parking"
                     style="@style/homeCardImage"
+                    android:tint="#ffffff"
                     />
 
             </RelativeLayout>
@@ -130,8 +132,9 @@
                 <ImageView
                     android:id="@+id/btnCctv"
                     android:layout_height="90dp"
-                    android:src="@drawable/shop"
+                    android:src="@drawable/ic_cctv"
                     style="@style/homeCardImage"
+                    android:tint="#ffffff"
                     />
 
             </RelativeLayout>
@@ -169,8 +172,10 @@
                 <ImageView
                     android:id="@+id/btnGate"
                     android:layout_height="90dp"
-                    android:src="@drawable/gates"
+                    android:src="@drawable/ic_gate"
                     style="@style/homeCardImage"
+                    android:tint="#ffffff"
+
                     />
 
             </RelativeLayout>
