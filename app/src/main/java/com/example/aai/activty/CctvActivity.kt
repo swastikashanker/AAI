@@ -38,7 +38,7 @@ class CctvActivity:AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
 
 
-                val people = p0.getValue(Long::class.java)
+                val people = p0.getValue(String::class.java)
 
                 Log.e("People NO. ", "People $people")
                 val tv_people: TextView = findViewById(R.id.people_counter_tv) as TextView

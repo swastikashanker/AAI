@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.util.ArrayList
-
 class ParkingActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,20 +38,23 @@ class ParkingActivity:AppCompatActivity() {
 
         occupiedref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                //To change body of created functions use File | Settings | File Templates.
             }
 
             override fun onDataChange(p0: DataSnapshot) {
                 val data = ArrayList<DataEntry>()
 
-                val occupied = p0.getValue(Long::class.java)
+                val occupied = p0.getValue(String::class.java)
+                val occupied1 = occupied!!.toInt()
+                val unoccupied = 10 - occupied1
 
+
+                val unoccupied1 = unoccupied
                 Log.e("Occupied", "Occupied $occupied")
-                val unoccupied = 10.00 - occupied as Long
                 Log.e("unoccc","$unoccupied")
 
-                data.add(ValueDataEntry("Occupied space",occupied))
-                data.add(ValueDataEntry("Unoccupied space",unoccupied))
+                data.add(ValueDataEntry("Occupied space",occupied1 as Int))
+                data.add(ValueDataEntry("Unoccupied space",unoccupied1 as Int))
 
 
                 // data.add(ValueDataEntry("Free space",))

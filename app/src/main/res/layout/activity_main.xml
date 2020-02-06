@@ -171,7 +171,6 @@
                     android:layout_height="90dp"
                     android:src="@drawable/gates"
                     style="@style/homeCardImage"
-
                     />
 
             </RelativeLayout>

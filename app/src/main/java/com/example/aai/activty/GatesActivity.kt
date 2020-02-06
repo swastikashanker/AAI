@@ -50,7 +50,7 @@ class GatesActivity:AppCompatActivity() {
             }
 
             override fun onDataChange(p0: DataSnapshot) {
-                val entering= p0.getValue(Long::class.java)
+                val entering= p0.getValue(String::class.java)
 
                 Log.e("Entering","$entering")
                 makeText(applicationContext,"No. of people entering are $entering", LENGTH_SHORT).show()
@@ -63,7 +63,7 @@ class GatesActivity:AppCompatActivity() {
 
                     override fun onDataChange(p1: DataSnapshot) {
 
-                        val leaving =p1.getValue(Long::class.java)
+                        val leaving =p1.getValue(String::class.java)
                         val data = ArrayList<DataEntry>()
 
                         Log.e("Leaving","$leaving")
@@ -71,8 +71,8 @@ class GatesActivity:AppCompatActivity() {
                         val anyChartView = findViewById<AnyChartView>(R.id.chart_gates)
                         val cartesian = AnyChart.column()
 
-                        data.add(ValueDataEntry("Entering",entering))
-                        data.add(ValueDataEntry("leaving",leaving))
+                        data.add(ValueDataEntry("Entering",entering!!.toInt()))
+                        data.add(ValueDataEntry("leaving",leaving!!.toInt()))
                         val column = cartesian.column(data)
                         column.data(data)
 //                        anyChartView.clear()

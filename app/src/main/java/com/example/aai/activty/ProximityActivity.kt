@@ -40,7 +40,7 @@ class ProximityActivity : AppCompatActivity() {
 
             override fun onDataChange(p0: DataSnapshot) {
 
-                val node = p0.getValue(Long::class.java)
+                val node = p0.getValue(String::class.java)
 
                 Log.e("node", "node is $node")
 
